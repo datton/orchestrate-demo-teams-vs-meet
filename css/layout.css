@@ -94,3 +94,20 @@ main :target { scroll-margin-top: 1rem; }
   #site-nav a[aria-current="page"] { text-decoration: underline; }
 }
 @media print { .skip-link, .nav-toggle, #site-nav { display: none; } }
+
+/* Tables: readable on desktop, stacked per row on phones (labels come from CSS, no markup change). */
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: var(--text-sm); }
+caption { text-align: left; font-family: var(--font-ui); font-weight: 700; padding-bottom: .5rem; color: var(--color-muted); }
+th, td { padding: .6rem .75rem; text-align: left; vertical-align: top; border-bottom: var(--rule-thin); overflow-wrap: anywhere; }
+thead th { border-bottom: 3px solid var(--color-text); font-family: var(--font-ui); text-transform: uppercase; letter-spacing: var(--tracking-wide); }
+tbody th { font-family: var(--font-ui); font-weight: 700; }
+@media (max-width: 39.99rem) {
+  thead { position: absolute; left: -9999px; }
+  table, tbody, tr, th, td { display: block; width: 100%; }
+  tr { margin-bottom: 1.25rem; border-top: 3px solid var(--color-text); }
+  tbody th { background: var(--color-surface); border-bottom: var(--rule-thin); }
+  td { border-bottom: var(--rule-thin); }
+  td::before { display: block; font-family: var(--font-ui); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--color-muted); }
+  td:nth-of-type(1)::before { content: "Microsoft Teams"; }
+  td:nth-of-type(2)::before { content: "Google Meet"; }
+}
