@@ -1,0 +1,82 @@
+/* Design tokens: owned by the Designer. TEXT-ONLY site: no SVG, images or icons; interest comes from type.
+   NOTE: starter copied from another site; the Designer replaces the palette and type for this site.
+
+   PALETTE "wadi": warm sand paper, dark rock-brown ink, turquoise pool (the accent), terracotta canyon rock, palm green, sun gold.
+   Contrast (WCAG AA) on --color-bg: text 14.1:1, muted 7.6:1, pool/accent 6.4:1, terracotta 5.8:1, palm 6.6:1, gold-text 6.0:1.
+   On --color-surface: text 12.1:1, muted 6.5:1, accent 5.5:1. On --color-dark-bg: sand 14.3:1, gold-light 9.9:1, pool-light 9.0:1.
+   --color-gold is a bright sand-gold for borders/rules only, never for text on sand.
+   Use --color-pool-light for accents on dark colour blocks; --color-palm for secondary headings or labels.
+
+   TYPE SYSTEM (system fonts only):
+   - Display / headings: --font-display, a humanist serif stack (Georgia, Palatino). Large, tight, heavy.
+   - Body: --font-body, the same serif at 1.125rem, line height 1.7, measure 62ch.
+   - UI labels, nav, captions: --font-ui, system sans, uppercase with --tracking-wide.
+   - Facts/figures (distances, heights, times): --font-mono.
+   - Scale is 1.333 (perfect fourth); --text-hero is for page titles only.
+   ORNAMENTS (plain Unicode text or CSS borders): --ornament-* strings in ::before/::after content, --rule-* border shorthands. */
+:root {
+  --color-bg: #f6eddc;
+  --color-surface: #ecdcba;
+  --color-text: #2a1d14;
+  --color-muted: #5b4636;
+  --color-accent: #0b5f63;
+  --color-accent-contrast: #f6eddc;
+  --color-red: #9a3f1d;
+  --color-red-deep: #0b5f63;
+  --color-gold: #c58f3a;
+  --color-gold-text: #7a5200;
+  --color-gold-light: #e8c27a;
+  --color-border: #cdb78a;
+  --color-dark-bg: #2b1a12;
+  --color-palm: #2f5d2a;
+  --color-pool-light: #5fd0c8;
+  --color-dark-text: #f6eddc;
+
+  --font-display: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", "Times New Roman", serif;
+  --font-body: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", "Times New Roman", serif;
+  --font-heading: var(--font-display);
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.125rem;
+  --text-md: 1.5rem;
+  --text-lg: 2rem;
+  --text-xl: 2.667rem;
+  --text-2xl: 3.556rem;
+  --text-hero: clamp(3rem, 10vw, 6.5rem);
+
+  --weight-normal: 400;
+  --weight-heading: 700;
+  --weight-black: 900;
+  --leading-tight: 1.1;
+  --leading-body: 1.7;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.14em;
+  --tracking-widest: 0.3em;
+  --measure: 62ch;
+
+  --ornament-rule: "\25B3";
+  --ornament-fleuron: "\2756";
+  --ornament-diamond: "\25C6";
+  --ornament-divider: "\25C6 \25C7 \25C6";
+  --ornament-dots: "\00B7 \00B7 \00B7";
+  --rule-double: 4px double var(--color-gold);
+  --rule-thick-red: 6px solid var(--color-red);
+  --rule-thin: 1px solid var(--color-border);
+
+  --space: 1rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --radius-sm: 0;
+  --radius: 2px;
+  --radius-lg: 4px;
+  --shadow: none;
+  --max-width: 70rem;
+}
